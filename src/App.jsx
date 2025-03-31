@@ -45,9 +45,8 @@ function App() {
         />
         <BurgerStack
           stack={stack}
-          removeFromBurger={removeFromBurger
-
-          } />
+          removeFromBurger={removeFromBurger}
+        />
       </section>
     </main>
   );
