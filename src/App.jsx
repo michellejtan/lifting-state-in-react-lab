@@ -21,11 +21,33 @@ function App() {
     { name: 'Swiss Cheese', color: '#F1E1A8' },
   ];
 
+  const [stack, setStack] = useState([]);
+
+  const addToBurger = (ingredient) => {
+    const newStack = [ingredient, ...stack];
+    setStack(newStack);
+  };
+
+  const removeFromBurger = (indexToRemove) => {
+    let newStack = [...stack];
+    newStack.splice(indexToRemove, 1);
+    setStack(newStack);
+  };
+
   return (
     <main>
       <h1>Burger Stacker</h1>
       <section>
         {/* List & Stack components */}
+        <IngredientList
+          ingredients={availableIngredients}
+          addToBurger={addToBurger}
+        />
+        <BurgerStack
+          stack={stack}
+          removeFromBurger={removeFromBurger
+
+          } />
       </section>
     </main>
   );
