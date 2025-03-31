@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import IngredientList from './components/IngredientList/IngredientList';
+import BurgerStack from './components/BurgerStack/BurgerStack';
 import './App.css'
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
     <main>
       <h1>Burger Stacker</h1>
       <section>
-      {/* List & Stack components */}
+        {/* List & Stack components */}
       </section>
     </main>
   );
